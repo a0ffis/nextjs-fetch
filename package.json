@@ -12,7 +12,6 @@
     "@next/font": "13.1.5",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
-<<<<<<< HEAD
     "font-awesome": "^4.7.0",
     "next": "13.1.5",
     "react": "18.2.0",
@@ -22,10 +21,5 @@
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4"
-=======
-    "next": "13.1.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
->>>>>>> b7e3a295df34eb480695aa459f5f336bd733e8e2
   }
 }

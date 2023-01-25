@@ -44,11 +44,7 @@ const Blog = () => {
 				<h1>Blog</h1>
 				<div className="m-8">
 					{datas.data.map((data) => (
-<<<<<<< HEAD
 						<div key={data.id} onClick={()=> console.log(data.id)}>
-=======
-						<div key={data.id}>
->>>>>>> b7e3a295df34eb480695aa459f5f336bd733e8e2
                             <h6>{data.title}</h6>
                         </div>
 					))}

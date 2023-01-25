@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -19,20 +18,4 @@ export default function Document() {
 			</body>
 		</Html>
 	);
-=======
-import { Html, Head, Main, NextScript } from 'next/document'
-import Navbar from 'components/navbar'
-
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body className='font-serif'>
-        <Navbar />
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
->>>>>>> b7e3a295df34eb480695aa459f5f336bd733e8e2
 }

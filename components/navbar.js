@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
-=======
-import React from "react";
->>>>>>> b7e3a295df34eb480695aa459f5f336bd733e8e2
 import Link from "next/link";
 
 const Navbar = () => {
 	return (
 		<>
-<<<<<<< HEAD
 			<header className="container py-4 cl-ci-primary">
 				<div className="flex justify-between items-center h-full">
 					<div className="flex justify-around items-center gap-6">
@@ -59,18 +54,6 @@ const Navbar = () => {
 				</div>
 				<div className="sp h-4"></div>
 				<div className="sp" style={{ height: "2px" , backgroundColor: "var(--ci-secondary)"}}></div>
-=======
-			<header className="container font-serif">
-				<div className="flex justify-around items-center h-full">
-					<Link href="/">
-						<h3>Home</h3>
-					</Link>
-					<Link href="/blog">
-						<h3>Blog</h3>
-					</Link>
-					<h3>About</h3>
-				</div>
->>>>>>> b7e3a295df34eb480695aa459f5f336bd733e8e2
 			</header>
 		</>
 	);
