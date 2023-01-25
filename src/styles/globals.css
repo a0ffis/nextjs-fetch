@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@500&family=Trirong&display=swap');
+
+body {
+	font-family: serif;
+}
+
+:root {}
+
+header {
+	height: 70px;
+}
+
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body p {
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: 400;
+}
+
+body h1 {
+	font-size: 56px !important;
+	line-height: 56px;
+	font-weight: 400;
+}
+
+body h2 {
+	font-size: 48px;
+	line-height: 48px;
+	font-weight: 400;
+}
+
+body h3 {
+	font-size: 40px;
+	line-height: 44px;
+	font-weight: 400;
+}
+
+body h4 {
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 300;
+}
+
+body h5 {
+	font-size: 30px;
+	line-height: 32px;
+	font-weight: 500;
+}
+
+body h6,
+.h6 {
+	font-size: 26px;
+	line-height: 32px;
+	font-weight: 400;
+}
+
+@media (max-width: 768px) {
+	body h1 {
+		font-weight: 400;
+		font-size: 42px !important;
+		line-height: 40px;
+	}
+
+	body h2 {
+		font-weight: 400;
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	body h3 {
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	body h4 {
+		font-weight: 300;
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	body h5 {
+		font-weight: 500;
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	body h6,
+	.h6 {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+}
