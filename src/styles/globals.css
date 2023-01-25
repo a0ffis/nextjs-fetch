@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@500&family=Trirong&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: serif;
+	background-color: var(--ci-bg);
+}
+
+:root {
+	--ci-primary: #2f2f47;
+	--ci-secondary: #8c8c94;
+	--ci-three: #797b8f;
+
+	--ci-bg: #f6f4f0;
+}
+
+
+.cl-ci-primary {
+	color: var(--ci-primary);
+}
+
+.cl-ci-secondary {
+	color: var(--ci-secondary);
+}
+
+.cl-ci-three {
+	color: var(--ci-three);
+}
+
+.bg-primary {
+	background-color: var(--ci-bg);
+}
+
+/* header {
+	height: 70px;
+} */
+
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+}
+
+
+.nav-menu:hover {
+	color: var(--ci-secondary);
+}
+
+input {
+	background-color: var(--ci-bg)
+}
+
+.truncate-title {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 64px;
+	font-weight: 600;
+}
+
+.truncate-body {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	min-height: calc(32px * 3);
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.sp {
+	width: 100%;
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body p {
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: 400;
+}
+
+body h1 {
+	font-size: 56px !important;
+	line-height: 56px;
+	font-weight: 400;
+}
+
+body h2 {
+	font-size: 48px;
+	line-height: 48px;
+	font-weight: 400;
+}
+
+body h3 {
+	font-size: 40px;
+	line-height: 44px;
+	font-weight: 400;
+}
+
+body h4 {
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 300;
+}
+
+body h5 {
+	font-size: 30px;
+	line-height: 32px;
+	font-weight: 500;
+}
+
+body h6,
+.h6 {
+	font-size: 26px;
+	line-height: 32px;
+	font-weight: 400;
+}
+
+@media (max-width: 768px) {
+	body h1 {
+		font-weight: 400;
+		font-size: 42px !important;
+		line-height: 40px;
+	}
+
+	body h2 {
+		font-weight: 400;
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	body h3 {
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	body h4 {
+		font-weight: 300;
+		font-size: 28px;
+		line-height: 36px;
+	}
+
+	body h5 {
+		font-weight: 500;
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	body h6,
+	.h6 {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+}
