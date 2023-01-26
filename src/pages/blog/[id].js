@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-const blog = () => {
+const Blog = () => {
 	const router = useRouter();
 	let param = router?.query?.id;
 	console.log(param);
@@ -23,4 +23,4 @@ const blog = () => {
 	);
 };
 
-export default blog;
+export default Blog;

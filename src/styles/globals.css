@@ -61,6 +61,16 @@ input {
 	font-weight: 600;
 }
 
+.truncate-subtitle {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 36px;
+	font-weight: 600;
+}
+
 .truncate-body {
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
@@ -75,10 +85,124 @@ input {
 	display: block;
 }
 
+.homepost {
+	opacity: 1;
+}
 
+.homepost[data-active='-1'] {
+	transition: .8s all;
+	opacity: 0;
+}
 
+.homepost[data-active='1'] {
+	transition: .8s all;
+	opacity: 1;
+}
 
+.text-body p {
+	margin-bottom: 2rem;
+}
 
+.text-body figure,
+.text-body img {
+	margin: auto;
+	padding-bottom: 2rem;
+}
+
+.text-body figcaption {
+	text-align: center;
+}
+
+.post-info {
+	position: absolute;
+	bottom: 1%;
+	padding: 2% 4%;
+	width: 80%;
+}
+
+.home-postimage {
+	padding-top: 52.33%;
+}
+
+.home-postspace {
+	padding-top: 20%;
+}
+
+.left-menu{
+	transition: 1.4s all;
+	background-color: var(--ci-primary);
+	position: fixed;
+	width: 345px;
+	height: 100%;
+	top: 0;
+	z-index: 999;
+}
+@media (max-width: 1024px) {
+	.truncate-title {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		line-height: 64px;
+		font-weight: 600;
+	}
+
+	.truncate-body {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		min-height: calc(32px * 2);
+		-webkit-box-orient: vertical;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	.post-info {
+		position: absolute;
+		bottom: 2%;
+		padding: 4% 4%;
+		width: 75%;
+	}
+
+	.home-postimage {
+		padding-top: 100%
+	}
+	.mock-up{
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.post-info {
+		position: absolute;
+		bottom: 2%;
+		padding: 4% 4%;
+		width: 90%;
+	}
+	.post-info p, .tag p {
+		line-height: 20px;
+		font-size: 16px !important;
+	}
+
+	.truncate-title {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		line-height: 32px;
+		font-size: 24px !important;
+		font-weight: 600;
+	}
+
+	.nav-menu-wrap {
+		display: none;
+	}
+
+	.home-postspace {
+		padding-top: 90%;
+	}
+}
 
 
 
