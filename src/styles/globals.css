@@ -129,7 +129,7 @@ input {
 }
 
 .left-menu{
-	transition: 1.4s all;
+	transition: 1s all;
 	background-color: var(--ci-primary);
 	position: fixed;
 	width: 345px;
