@@ -8,6 +8,8 @@ const Navbar = () => {
 	const toggleMenu = (click) => {
 		setToggle(click);
 	};
+	// console.log(toggle);
+	
 	// console.log(input);
 	return (
 		<>

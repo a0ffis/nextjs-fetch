@@ -1,5 +1,5 @@
 import { useEffect, useState, useReducer } from "react";
-import Card from "components/section-card";
+import Section from "components/section-card";
 import Link from "next/link";
 import Homepost from "components/homepost";
 const reducer = (stage, action) => {
@@ -82,12 +82,12 @@ const Home = () => {
 				)}
 				<div className="sp home-postimage"></div>
 				{/* <div className="sp hidden xl:block" style={{ paddingTop: "100%" }}></div> */}
-				<div className="w-full h-0 home-postspace" onClick={(e) => console.log(e)}></div>
+				<div className="w-full h-0 home-postspace"></div>
 				<div className="sp h-2" style={{ background: "var(--ci-primary)" }}></div>
 			</section>
 			<section className="container mt-10 px-4">
 				{section.map((item, index) => (
-					<Card key={index} payload={item} />
+					<Section key={index} payload={item} />
 				))}
 			</section>
 			{/* <Homepost post={post} payload={datas} */}

@@ -31,12 +31,11 @@ const initialState = {
 
 function single() {
 	const [datas, dispatch] = useReducer(reducer, initialState);
-	const [loading, setLoading] = useState(true);
 
 	const router = useRouter();
 	const API = router?.query?.keyword;
 	// console.log(API);
-	let param = router?.query?.id;
+	// let param = router?.query?.id;
 
 	useEffect(() => {
 		const dataFetch = async () => {
