@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer, useEffect, useCallback, useMemo } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -38,18 +38,24 @@ const Id = () => {
 		`https://content.guardianapis.com/search?q=` +
 		param +
 		`&show-fields=all&page-size=12&api-key=224c1cd6-a34b-4542-9f6f-edba4acd6273`;
+
+	const dataFetch = useCallback(() => {
+		dispatch({ type: "FETCHING_DATA" });
+		fetch(API)
+			.then((res) => res.json())
+			.then((data) => dispatch({ type: "FETCH_DATA_SUCCESS", payload: data.response }))
+			.catch((err) => dispatch({ type: "FETCH_DATA_ERROR", payload: err }));
+	}, [param]);
+
 	useEffect(() => {
-		const dataFetch = async () => {
-			dispatch({ type: "FETCHING_DATA" });
-			await fetch(API)
-				.then((res) => res.json())
-				.then((data) => dispatch({ type: "FETCH_DATA_SUCCESS", payload: data.response }))
-				.catch((err) => dispatch({ type: "FETCH_DATA_ERROR", payload: err }));
-		};
-		if (param != undefined) {
+		if (param == undefined) {
+			console.log(param);
+		}else {
+			console.log(API, param);
 			dataFetch();
 		}
-	}, [API]);
+	}, [dataFetch]);
+	// console.log(param);
 	// console.log(param, API);
 
 	const convertData = (data) => {

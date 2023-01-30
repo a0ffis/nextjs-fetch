@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer, useEffect, useCallback } from "react";
 import Link from "next/link";
 
 const reducer = (stage, action) => {
@@ -37,16 +37,17 @@ const Section = (props) => {
 		`https://content.guardianapis.com/search?q=` +
 		props.payload +
 		`&show-fields=all&page-size=3&api-key=224c1cd6-a34b-4542-9f6f-edba4acd6273`;
+
+	const dataFetch = useCallback(() => {
+		dispatch({ type: "FETCHING_DATA" });
+		fetch(API)
+			.then((res) => res.json())
+			.then((data) => dispatch({ type: "FETCH_DATA_SUCCESS", payload: data.response }))
+			.catch((err) => dispatch({ type: "FETCH_DATA_ERROR", payload: err }));
+	}, []);
 	useEffect(() => {
-		const dataFetch = async () => {
-			dispatch({ type: "FETCHING_DATA" });
-			await fetch(API)
-				.then((res) => res.json())
-				.then((data) => dispatch({ type: "FETCH_DATA_SUCCESS", payload: data.response }))
-				.catch((err) => dispatch({ type: "FETCH_DATA_ERROR", payload: err }));
-		};
 		dataFetch();
-	}, [API]);
+	}, [dataFetch, API]);
 	// console.log(datas);
 	const convertData = (data) => {
 		const monthNames = [
@@ -92,8 +93,13 @@ const Section = (props) => {
 									<div className="flex flex-col">
 										<p className="text-lg pt-4 lg:pt-8 truncate">{data.fields.byline}</p>
 										<p className="">{convertData(data.fields.firstPublicationDate)}</p>
-										<h5 className="pt-3 lg:pt-6 truncate-subtitle font-bold">{data.fields.headline}</h5>
-										<div className="sp mt-4 lg:mt-6" style={{background: 'var(--ci-primary)', height: '2px'}}></div>
+										<h5 className="pt-3 lg:pt-6 truncate-subtitle font-bold">
+											{data.fields.headline}
+										</h5>
+										<div
+											className="sp mt-4 lg:mt-6"
+											style={{ background: "var(--ci-primary)", height: "2px" }}
+										></div>
 									</div>
 								</div>
 							</Link>

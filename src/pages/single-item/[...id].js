@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect, useState } from "react";
+import React, { useReducer, useEffect, useCallback} from "react";
 import { useRouter } from "next/router";
 
 const reducer = (stage, action) => {
@@ -37,18 +37,19 @@ function Single() {
 	// console.log(API);
 	// let param = router?.query?.id;
 
+	const dataFetch = useCallback( () => {
+		dispatch({ type: "FETCHING_DATA" });
+		fetch(API + "?show-fields=all&api-key=224c1cd6-a34b-4542-9f6f-edba4acd6273")
+			.then((res) => res.json())
+			.then((data) => dispatch({ type: "FETCH_DATA_SUCCESS", payload: data.response }))
+			.catch((err) => dispatch({ type: "FETCH_DATA_ERROR", payload: err }));
+	}, []);
+
 	useEffect(() => {
-		const dataFetch = async () => {
-			dispatch({ type: "FETCHING_DATA" });
-			await fetch(API + "?show-fields=all&api-key=224c1cd6-a34b-4542-9f6f-edba4acd6273")
-				.then((res) => res.json())
-				.then((data) => dispatch({ type: "FETCH_DATA_SUCCESS", payload: data.response }))
-				.catch((err) => dispatch({ type: "FETCH_DATA_ERROR", payload: err }));
-		};
 		if (router?.query?.keyword != undefined) {
 			dataFetch();
 		}
-	}, [API]);
+	}, [dataFetch, API]);
 
 	console.log(datas);
 	// console.log("https://content.guardianapis.com/" + API + `?api-key=224c1cd6-a34b-4542-9f6f-edba4acd6273`);
