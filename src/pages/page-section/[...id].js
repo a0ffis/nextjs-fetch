@@ -45,7 +45,7 @@ const Id = () => {
 			.then((res) => res.json())
 			.then((data) => dispatch({ type: "FETCH_DATA_SUCCESS", payload: data.response }))
 			.catch((err) => dispatch({ type: "FETCH_DATA_ERROR", payload: err }));
-	}, [param]);
+	}, [API]);
 
 	useEffect(() => {
 		if (param == undefined) {
@@ -54,7 +54,7 @@ const Id = () => {
 			console.log(API, param);
 			dataFetch();
 		}
-	}, [dataFetch]);
+	}, [dataFetch, API, param]);
 	// console.log(param);
 	// console.log(param, API);
 

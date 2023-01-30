@@ -46,12 +46,12 @@ function Single() {
 	}, []);
 
 	useEffect(() => {
-		if (router?.query?.keyword != undefined) {
+		if (API != undefined) {
 			dataFetch();
 		}
 	}, [dataFetch, API]);
 
-	console.log(datas);
+	// console.log(datas);
 	// console.log("https://content.guardianapis.com/" + API + `?api-key=224c1cd6-a34b-4542-9f6f-edba4acd6273`);
 	return (
 		<>

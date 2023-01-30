@@ -44,7 +44,7 @@ const Section = (props) => {
 			.then((res) => res.json())
 			.then((data) => dispatch({ type: "FETCH_DATA_SUCCESS", payload: data.response }))
 			.catch((err) => dispatch({ type: "FETCH_DATA_ERROR", payload: err }));
-	}, []);
+	}, [API]);
 	useEffect(() => {
 		dataFetch();
 	}, [dataFetch, API]);
