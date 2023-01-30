@@ -29,7 +29,7 @@ const initialState = {
 	status: "",
 };
 
-function single() {
+function Single() {
 	const [datas, dispatch] = useReducer(reducer, initialState);
 
 	const router = useRouter();
@@ -86,4 +86,4 @@ function single() {
 	);
 }
 
-export default single;
+export default Single;
