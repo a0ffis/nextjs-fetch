@@ -1,36 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@500&family=Trirong&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Taviraj:wght@500&family=Trirong&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-	font-family: serif;
-	background-color: var(--ci-bg);
+    font-family: serif;
+    background-color: var(--ci-bg);
 }
 
 :root {
-	--ci-primary: #2f2f47;
-	--ci-secondary: #8c8c94;
-	--ci-three: #797b8f;
-
-	--ci-bg: #f6f4f0;
+    --ci-primary: #2f2f47;
+    --ci-secondary: #8c8c94;
+    --ci-three: #797b8f;
+    --ci-text-color: #22ff22;
+    --ci-bg: #f6f4f0;
 }
 
-
 .cl-ci-primary {
-	color: var(--ci-primary);
+    color: var(--ci-primary);
 }
 
 .cl-ci-secondary {
-	color: var(--ci-secondary);
+    color: var(--ci-secondary);
 }
 
 .cl-ci-three {
-	color: var(--ci-three);
+    color: var(--ci-three);
 }
 
 .bg-primary {
-	background-color: var(--ci-bg);
+    background-color: var(--ci-bg);
 }
 
 /* header {
@@ -38,299 +37,250 @@ body {
 } */
 
 .container {
-	max-width: 1320px;
-	margin: 0 auto;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
-
 .nav-menu:hover {
-	color: var(--ci-secondary);
+    color: var(--ci-secondary);
 }
 
 input {
-	background-color: var(--ci-bg)
+    background-color: var(--ci-bg);
 }
 
 .truncate-title {
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	line-height: 64px;
-	font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 64px;
+    font-weight: 600;
 }
 
 .truncate-subtitle {
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	line-height: 36px;
-	font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 36px;
+    font-weight: 600;
 }
 
 .truncate-body {
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	min-height: calc(32px * 3);
-	-webkit-box-orient: vertical;
-	text-overflow: ellipsis;
-	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    min-height: calc(32px * 3);
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .sp {
-	width: 100%;
-	display: block;
+    width: 100%;
+    display: block;
 }
 
 .homepost {
-	opacity: 1;
+    opacity: 1;
 }
 
-.homepost[data-active='-1'] {
-	transition: .8s all;
-	opacity: 0;
+.homepost[data-active="-1"] {
+    transition: 0.8s all;
+    opacity: 0;
 }
 
-.homepost[data-active='1'] {
-	transition: .8s all;
-	opacity: 1;
+.homepost[data-active="1"] {
+    transition: 0.8s all;
+    opacity: 1;
 }
 
 .text-body p {
-	margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .text-body figure,
 .text-body img {
-	margin: auto;
-	padding-bottom: 2rem;
+    margin: auto;
+    padding-bottom: 2rem;
 }
 
 .text-body figcaption {
-	text-align: center;
+    text-align: center;
 }
 
 .post-info {
-	position: absolute;
-	bottom: 1%;
-	padding: 2% 4%;
-	width: 80%;
+    position: absolute;
+    bottom: 1%;
+    padding: 2% 4%;
+    width: 80%;
 }
 
 .home-postimage {
-	padding-top: 52.33%;
+    padding-top: 52.33%;
 }
 
 .home-postspace {
-	padding-top: 20%;
+    padding-top: 20%;
 }
 
-.left-menu{
-	transition: 1s all;
-	background-color: var(--ci-primary);
-	position: fixed;
-	width: 345px;
-	height: 100%;
-	top: 0;
-	z-index: 999;
+.left-menu {
+    transition: 1s all;
+    background-color: var(--ci-primary);
+    position: fixed;
+    width: 345px;
+    height: 100%;
+    top: 0;
+    z-index: 999;
 }
 @media (max-width: 1024px) {
-	.truncate-title {
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		line-height: 64px;
-		font-weight: 600;
-	}
+    .truncate-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 64px;
+        font-weight: 600;
+    }
 
-	.truncate-body {
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		min-height: calc(32px * 2);
-		-webkit-box-orient: vertical;
-		text-overflow: ellipsis;
-		overflow: hidden;
-	}
+    .truncate-body {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        min-height: calc(32px * 2);
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 
-	.post-info {
-		position: absolute;
-		bottom: 2%;
-		padding: 4% 4%;
-		width: 75%;
-	}
+    .post-info {
+        position: absolute;
+        bottom: 2%;
+        padding: 4% 4%;
+        width: 75%;
+    }
 
-	.home-postimage {
-		padding-top: 100%
-	}
-	.mock-up{
-		display: none;
-	}
+    .home-postimage {
+        padding-top: 100%;
+    }
+    .mock-up {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
-	.post-info {
-		position: absolute;
-		bottom: 2%;
-		padding: 4% 4%;
-		width: 90%;
-	}
-	.post-info p, .tag p {
-		line-height: 20px;
-		font-size: 16px !important;
-	}
+    .post-info {
+        position: absolute;
+        bottom: 2%;
+        padding: 4% 4%;
+        width: 90%;
+    }
+    .post-info p,
+    .tag p {
+        line-height: 20px;
+        font-size: 16px !important;
+    }
 
-	.truncate-title {
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		line-height: 32px;
-		font-size: 24px !important;
-		font-weight: 600;
-	}
+    .truncate-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 32px;
+        font-size: 24px !important;
+        font-weight: 600;
+    }
 
-	.nav-menu-wrap {
-		display: none;
-	}
+    .nav-menu-wrap {
+        display: none;
+    }
 
-	.home-postspace {
-		padding-top: 90%;
-	}
+    .home-postspace {
+        padding-top: 90%;
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body p {
-	font-size: 22px;
-	line-height: 28px;
-	font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
 }
 
 body h1 {
-	font-size: 56px !important;
-	line-height: 56px;
-	font-weight: 400;
+    font-size: 56px !important;
+    line-height: 56px;
+    font-weight: 400;
 }
 
 body h2 {
-	font-size: 48px;
-	line-height: 48px;
-	font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 400;
 }
 
 body h3 {
-	font-size: 40px;
-	line-height: 44px;
-	font-weight: 400;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 400;
 }
 
 body h4 {
-	font-size: 30px;
-	line-height: 40px;
-	font-weight: 300;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 300;
 }
 
 body h5 {
-	font-size: 30px;
-	line-height: 32px;
-	font-weight: 500;
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 500;
 }
 
 body h6,
 .h6 {
-	font-size: 26px;
-	line-height: 32px;
-	font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 400;
 }
 
 @media (max-width: 768px) {
-	body h1 {
-		font-weight: 400;
-		font-size: 42px !important;
-		line-height: 40px;
-	}
+    body h1 {
+        font-weight: 400;
+        font-size: 42px !important;
+        line-height: 40px;
+    }
 
-	body h2 {
-		font-weight: 400;
-		font-size: 40px;
-		line-height: 40px;
-	}
+    body h2 {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+    }
 
-	body h3 {
-		font-weight: 400;
-		font-size: 30px;
-		line-height: 36px;
-	}
+    body h3 {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+    }
 
-	body h4 {
-		font-weight: 300;
-		font-size: 28px;
-		line-height: 36px;
-	}
+    body h4 {
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 36px;
+    }
 
-	body h5 {
-		font-weight: 500;
-		font-size: 28px;
-		line-height: 32px;
-	}
+    body h5 {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 32px;
+    }
 
-	body h6,
-	.h6 {
-		font-weight: 400;
-		font-size: 24px;
-		line-height: 32px;
-	}
-
+    body h6,
+    .h6 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+    }
 }
